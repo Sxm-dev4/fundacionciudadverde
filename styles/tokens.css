@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+
+  /* FCV Brand 2026 / White Direction */
+  --color-forest: #5f6449;
+  --color-lime-medium: #ebff92;
+  --color-lime-energy: #e3ff68;
+  --color-violet: #78508f;
+  --color-lavender: #d792ff;
+  --color-slate: #4c4f40;
+  --color-olive-dark: #424632;
+  --color-plum: #38343a;
+  --color-paper: #f3ffbd;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --type-caption-size: 0.75rem;
+  --type-caption-line-height: 1rem;
+  --type-label-size: 0.75rem;
+  --type-label-line-height: 1rem;
+  --type-body-small-size: 0.875rem;
+  --type-body-small-line-height: 1.25rem;
+  --type-body-size: 1rem;
+  --type-body-line-height: 1.625rem;
+  --type-body-large-size: 1.125rem;
+  --type-body-large-line-height: 1.75rem;
+  --type-heading-3-size: clamp(1.5rem, 1.35rem + 0.6vw, 2rem);
+  --type-heading-3-line-height: 1.2;
+  --type-heading-2-size: clamp(2rem, 1.7rem + 1.2vw, 3rem);
+  --type-heading-2-line-height: 1.1;
+  --type-display-size: clamp(2.5rem, 1.75rem + 3vw, 4.5rem);
+  --type-display-line-height: 1.03;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-wide: 0.08em;
+
+  /* Layout: mobile 0–767, tablet 768–1023, desktop 1024+ */
+  --breakpoint-mobile-max: 767px;
+  --breakpoint-tablet-min: 768px;
+  --breakpoint-tablet-max: 1023px;
+  --breakpoint-desktop-min: 1024px;
+  --container-max-width: 75rem;
+  --gutter-mobile: 1.25rem;
+  --gutter-desktop: 2.5rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Shape and borders */
+  --radius-small: 0.5rem;
+  --radius-control: 0.75rem;
+  --radius-medium: 0.875rem;
+  --radius-pill: 999px;
+  --border-thin: 1px;
+  --border-strong: 2px;
+
+  /* Interaction */
+  --control-min-height: 3rem;
+  --focus-color: var(--color-violet);
+  --focus-width: 3px;
+  --focus-offset: 3px;
+  --motion-fast: 160ms;
+  --z-header: 50;
+  --z-skip-link: 100;
+}

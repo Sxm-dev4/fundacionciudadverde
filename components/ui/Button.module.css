@@ -1,0 +1,66 @@
+.button {
+  min-height: var(--control-min-height);
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: var(--border-thin) solid transparent;
+  border-radius: var(--radius-control);
+  font-size: var(--type-body-small-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--type-body-small-line-height);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease;
+}
+
+.primary {
+  color: var(--color-olive-dark);
+  background: var(--color-lime-energy);
+}
+
+.secondary {
+  color: var(--color-olive-dark);
+  border-color: var(--color-forest);
+  background: transparent;
+}
+
+.text {
+  min-height: var(--control-min-height);
+  padding-inline: var(--space-2);
+  color: var(--color-forest);
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-thin);
+  text-underline-offset: var(--space-1);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  color: var(--color-slate);
+  border-color: transparent;
+  background: var(--color-paper);
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primary:not(:disabled):not([aria-disabled="true"]):hover {
+    background: var(--color-lime-medium);
+  }
+
+  .secondary:not(:disabled):not([aria-disabled="true"]):hover {
+    color: var(--color-white);
+    background: var(--color-forest);
+  }
+
+  .text:not(:disabled):not([aria-disabled="true"]):hover {
+    color: var(--color-violet);
+  }
+}

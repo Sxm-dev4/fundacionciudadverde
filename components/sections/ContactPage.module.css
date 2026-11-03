@@ -1,0 +1,571 @@
+.page,
+.successPage {
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--color-white);
+}
+
+.hero {
+  color: var(--color-white);
+  background: var(--color-plum);
+}
+
+.heroInner,
+.contentContainer,
+.formContainer,
+.successActionsInner {
+  width: min(calc(100% - (2 * var(--gutter-mobile))), 67.5rem);
+  margin-inline: auto;
+}
+
+.heroInner {
+  min-height: 19.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding-block: 2.875rem 2.625rem;
+}
+
+.hero :global(nav),
+.hero :global(nav a) {
+  color: var(--color-lime-energy);
+}
+
+.heroKicker,
+.optionsKicker,
+.formKicker,
+.successKicker {
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.125rem;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.heroKicker,
+.successKicker {
+  color: var(--color-lime-energy);
+}
+
+.hero h1 {
+  max-width: 11ch;
+  color: var(--color-white);
+  font-size: 2.125rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+}
+
+.heroIntroduction {
+  max-width: 38rem;
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.options {
+  padding-block: 3.5rem;
+  background: var(--color-paper);
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.optionsKicker,
+.formKicker {
+  color: var(--color-plum);
+}
+
+.options h2 {
+  color: var(--color-plum);
+  font-size: 1.8125rem;
+  font-weight: 800;
+  line-height: 2.25rem;
+}
+
+.desktopOptionTitle {
+  display: none;
+}
+
+.optionList {
+  display: grid;
+  gap: 1.125rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.optionList li {
+  min-height: 10.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  border: var(--border-thin) solid transparent;
+  border-radius: 0.625rem;
+  background: var(--color-white);
+}
+
+.optionList h3 {
+  color: var(--color-plum);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.625rem;
+  letter-spacing: normal;
+}
+
+.optionList p {
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+}
+
+.selectButton {
+  width: 100%;
+  margin-top: auto;
+  color: var(--color-plum);
+}
+
+.formSection {
+  background: var(--color-white);
+}
+
+.formContainer {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: 3rem 3.375rem;
+}
+
+.form {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.form h2 {
+  color: var(--color-plum);
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 2.3125rem;
+}
+
+.formHelp {
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+}
+
+.fieldGrid {
+  display: grid;
+  gap: 1.125rem;
+}
+
+.field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+
+.field label,
+.consentField label {
+  color: var(--color-plum);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.25rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  min-width: 0;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.8125rem 0.875rem;
+  border: var(--border-thin) solid color-mix(in srgb, var(--color-forest) 42%, transparent);
+  border-radius: var(--radius-small);
+  color: var(--color-plum);
+  background: var(--color-white);
+  line-height: 1.5rem;
+}
+
+.field textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-forest);
+  opacity: 0.88;
+}
+
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"],
+.field textarea[aria-invalid="true"],
+.consentField input[aria-invalid="true"] {
+  border-color: var(--color-violet);
+}
+
+.fieldError {
+  color: var(--color-violet);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.125rem;
+}
+
+.consentField {
+  min-height: 6.25rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.consentField > input {
+  width: var(--control-min-height);
+  height: var(--control-min-height);
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: var(--color-violet);
+}
+
+.consentField > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.consentField label {
+  color: var(--color-forest);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.3125rem;
+}
+
+.errorSummary,
+.transportError {
+  padding: var(--space-4);
+  border: var(--border-thin) solid var(--color-violet);
+  border-radius: var(--radius-small);
+  color: var(--color-plum);
+  background: var(--color-paper);
+}
+
+.errorSummary > p {
+  font-weight: var(--font-weight-semibold);
+}
+
+.errorSummary ul {
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-5);
+}
+
+.errorSummary a {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.transportError {
+  color: var(--color-plum);
+  font-weight: var(--font-weight-semibold);
+}
+
+.form .submitButton {
+  min-height: var(--control-min-height);
+  width: 100%;
+  color: var(--color-white);
+  background: var(--color-plum);
+}
+
+.support {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: 1.75rem;
+  border-radius: var(--radius-medium);
+  background: var(--color-paper);
+}
+
+.support h2 {
+  color: var(--color-plum);
+  font-size: 1.4375rem;
+  font-weight: 800;
+  line-height: 1.875rem;
+}
+
+.support > p {
+  color: var(--color-forest);
+  line-height: 1.5625rem;
+}
+
+.supportNote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-small);
+  background: var(--color-white);
+}
+
+.supportNote p:first-child {
+  color: var(--color-plum);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.125rem;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.supportNote p:last-child {
+  color: var(--color-forest);
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+
+.confirmation {
+  min-height: 30.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: 5.375rem var(--gutter-mobile) 4.375rem;
+  color: var(--color-white);
+  text-align: center;
+  background: var(--color-plum);
+}
+
+.successIcon {
+  width: 4.125rem;
+  height: 4.125rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-plum);
+  background: var(--color-lime-energy);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.confirmation h1 {
+  max-width: 10ch;
+  color: var(--color-white);
+  font-size: 2.125rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+}
+
+.confirmation h1:focus {
+  outline: none;
+}
+
+.confirmation > p:last-child {
+  max-width: 35rem;
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.successActions {
+  padding-block: 3rem 3.25rem;
+  background: var(--color-paper);
+}
+
+.successActionsInner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.successActions h2 {
+  margin-bottom: 0.125rem;
+  color: var(--color-plum);
+  font-size: 1.625rem;
+  font-weight: 800;
+  line-height: 2.0625rem;
+}
+
+.successActions .successPrimary,
+.successActions .successSecondary {
+  width: 100%;
+}
+
+.successActions .successPrimary {
+  color: var(--color-white);
+  background: var(--color-plum);
+}
+
+.successActions .successSecondary {
+  border-color: var(--color-plum);
+  color: var(--color-plum);
+  background: var(--color-white);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .optionList li:hover {
+    border-color: var(--color-forest);
+  }
+
+  .form .submitButton:hover,
+  .successActions .successPrimary:hover {
+    color: var(--color-plum);
+    background: var(--color-lime-energy);
+  }
+}
+
+@media (min-width: 768px) {
+  .heroInner,
+  .contentContainer,
+  .formContainer,
+  .successActionsInner {
+    width: min(calc(100% - (2 * var(--gutter-desktop))), 67.5rem);
+  }
+
+  .optionList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+  .fieldGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.125rem var(--space-4);
+  }
+
+  .form .submitButton {
+    width: 13.875rem;
+  }
+
+  .successActionsInner {
+    max-width: 42rem;
+  }
+
+  .successActions .successPrimary,
+  .successActions .successSecondary {
+    width: 22rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    background: var(--color-olive-dark);
+  }
+
+  .heroInner {
+    min-height: 0;
+    gap: 1.125rem;
+    padding-block: 3rem 2.25rem;
+  }
+
+  .hero h1 {
+    max-width: 35rem;
+    font-size: 3.25rem;
+    line-height: 3.625rem;
+  }
+
+  .heroIntroduction {
+    font-size: 1.1875rem;
+    line-height: 1.8125rem;
+  }
+
+  .options {
+    padding-block: 5.5rem;
+  }
+
+  .options .contentContainer {
+    gap: 0;
+  }
+
+  .optionsKicker,
+  .mobileOptionTitle {
+    display: none;
+  }
+
+  .desktopOptionTitle {
+    display: inline;
+  }
+
+  .options h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+  }
+
+  .optionList {
+    gap: var(--space-6);
+    padding-top: var(--space-2);
+  }
+
+  .optionList li {
+    min-height: 10.625rem;
+    padding: 1.25rem 1.25rem var(--space-4);
+    border-color: color-mix(in srgb, var(--color-slate) 64%, transparent);
+    border-radius: var(--radius-control);
+  }
+
+  .selectButton {
+    display: none;
+  }
+
+  .formContainer {
+    grid-template-columns: minmax(0, 2.1fr) minmax(16rem, 1fr);
+    align-items: start;
+    gap: 3rem;
+    padding-block: 5.75rem 5.875rem;
+  }
+
+  .form {
+    gap: 1.3125rem;
+  }
+
+  .fieldGrid .field {
+    min-height: 6.25rem;
+  }
+
+  .form h2 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+
+  .form .submitButton {
+    color: var(--color-olive-dark);
+    background: var(--color-lime-medium);
+  }
+
+  .consentField > input {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .support {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .confirmation {
+    min-height: 31rem;
+    padding-block: 6rem;
+    background: var(--color-olive-dark);
+  }
+
+  .confirmation h1 {
+    max-width: none;
+    font-size: 3.25rem;
+    line-height: 3.625rem;
+  }
+
+  .successActions {
+    padding-block: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .formContainer {
+    grid-template-columns: minmax(0, 41.75rem) 20rem;
+    gap: 5.75rem;
+  }
+}

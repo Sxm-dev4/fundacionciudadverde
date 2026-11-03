@@ -1,0 +1,18 @@
+.section {
+  min-height: 32rem;
+  width: min(calc(100% - (2 * var(--gutter-mobile))), var(--container-max-width));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.section > p:first-child {
+  color: var(--color-forest);
+  font-size: var(--type-label-size);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}

@@ -1,0 +1,62 @@
+.desktopFilters {
+  display: none;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  .desktopFilters {
+    display: grid;
+    grid-template-columns: minmax(15rem, 2fr) repeat(4, minmax(8.5rem, 1fr)) auto;
+    gap: 1rem;
+  }
+
+  .desktopFilters label,
+  .desktopFilters select,
+  .desktopFilters input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .desktopFilters select,
+  .desktopFilters input {
+    height: 3.25rem;
+    padding-inline: 1rem;
+    border: var(--border-thin) solid var(--color-slate);
+    border-radius: 0.625rem;
+    color: var(--color-olive-dark);
+    background: var(--color-white);
+    font-size: var(--type-body-small-size);
+  }
+
+  .desktopFilters select:disabled {
+    opacity: 0.72;
+  }
+
+  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search > span[aria-hidden="true"] {
+    position: absolute;
+    left: 1rem;
+    z-index: 1;
+    color: var(--color-olive-dark);
+    font-size: 1.2rem;
+  }
+
+  .search input {
+    padding-left: 2.75rem;
+  }
+}

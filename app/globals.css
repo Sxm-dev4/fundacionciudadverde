@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  color: var(--color-slate);
+  background: var(--color-white);
+  font-family: var(--font-manrope), sans-serif;
+  font-size: var(--type-body-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--type-body-line-height);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-plum);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--type-display-size);
+  line-height: var(--type-display-line-height);
+}
+
+h2 {
+  font-size: var(--type-heading-2-size);
+  line-height: var(--type-heading-2-line-height);
+}
+
+h3 {
+  font-size: var(--type-heading-3-size);
+  line-height: var(--type-heading-3-line-height);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+
+.container {
+  width: min(
+    calc(100% - (2 * var(--gutter-mobile))),
+    var(--container-max-width)
+  );
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: var(--z-skip-link);
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-small);
+  color: var(--color-olive-dark);
+  background: var(--color-lime-energy);
+  font-weight: var(--font-weight-semibold);
+  transform: translateY(calc(-100% - var(--space-5)));
+  transition: transform var(--motion-fast) ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: min(
+      calc(100% - (2 * var(--gutter-desktop))),
+      var(--container-max-width)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

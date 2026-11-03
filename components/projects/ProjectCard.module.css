@@ -1,0 +1,118 @@
+.card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-thin) solid var(--color-slate);
+  border-radius: var(--radius-control);
+  background: var(--color-white);
+}
+
+.imageWrap {
+  position: relative;
+  min-height: 12.25rem;
+  overflow: hidden;
+  background: var(--color-paper);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 320ms ease;
+}
+
+.content {
+  min-height: 18.75rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 1.25rem;
+}
+
+.field,
+.meta {
+  color: var(--color-slate);
+  font-size: var(--type-caption-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--type-caption-line-height);
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.content h3 {
+  color: var(--color-olive-dark);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 2rem;
+}
+
+.description {
+  color: var(--color-slate);
+  font-size: var(--type-body-small-size);
+  line-height: 1.375rem;
+}
+
+.meta {
+  margin-top: auto;
+  text-transform: none;
+}
+
+.action,
+.actionLabel {
+  min-height: var(--control-min-height);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-olive-dark);
+  font-size: var(--type-body-small-size);
+  font-weight: var(--font-weight-semibold);
+}
+
+.actionLabel {
+  opacity: 0.72;
+}
+
+.compact .content {
+  min-height: 15.5rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:has(.action:hover) .image {
+    transform: scale(1.025);
+  }
+
+  .action:hover {
+    color: var(--color-violet);
+  }
+}
+
+@media (max-width: 767px) {
+  .compact .imageWrap {
+    min-height: 11rem;
+  }
+
+  .compact .content {
+    min-height: 16rem;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .compact .meta {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .imageWrap {
+    min-height: 13.125rem;
+  }
+
+  .content {
+    min-height: 16.875rem;
+  }
+
+  .compact .content {
+    min-height: 14rem;
+  }
+}
